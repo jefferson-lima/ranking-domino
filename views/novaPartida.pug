@@ -1,0 +1,98 @@
+extends layout
+
+block scripts
+  script(src='/javascripts/novaPartida.js')
+
+block content
+  div(class='row')
+    div(class='col s12 m6 push-m3')
+        
+      form(id="novaPartida" method='POST' action='/salvarPartida')
+        
+        fieldset(class='card')
+          
+          span(class='card-title') Equipe 1
+          
+          div(class='input-field validate')
+            i(class="material-icons prefix") grade
+            input(
+              id='pontos1'
+              name='pontos1'
+              type='number'
+              min='0'
+              max='13'
+              placeholder='Pontos'
+              required='required'
+            )
+          
+          div(class='input-field validate')
+            i(class="material-icons prefix") account_circle
+            input(
+              name='jogadores'
+              type='text'
+              minlength='3'
+              maxlength='25'
+              required='required'
+              autocomplete='off'
+              placeholder='Jogador'
+            )
+          
+          div(class='input-field validate')
+            i(class="material-icons prefix") account_circle
+            input(
+              name='jogadores'
+              type='text'
+              minlength='3'
+              maxlength='25'
+              required='required'
+              autocomplete='off'
+              placeholder='Jogador'
+            )
+          
+        fieldset(class='card')
+          
+          span(class='card-title') Equipe 2
+            
+          div(class='input-field validate')
+            i(class="material-icons prefix") grade
+            input(
+              id='pontos2'
+              name='pontos2'
+              type='number'
+              min='0'
+              max='13'
+              placeholder='Pontos'
+              required='required'
+            )
+          
+          div(class='input-field validate')
+            i(class="material-icons prefix") account_circle
+            input(
+              name='jogadores'
+              type='text'
+              minlength='3'
+              maxlength='25'
+              required='required'
+              autocomplete='off'
+              placeholder='Jogador'
+            )
+          
+          div(class='input-field validate')
+            i(class="material-icons prefix") account_circle
+            input(
+              name='jogadores'
+              type='text'
+              minlength='3'
+              maxlength='25'
+              required='required'
+              autocomplete='off'
+              placeholder='Jogador'
+            )
+                
+        button(
+          type='submit',
+          class='waves-effect waves-light btn'
+        ) Salvar
+          i(class='material-icons right') send
+          
+        

@@ -1,0 +1,25 @@
+doctype html
+html
+  head
+        
+    meta(name='viewport', content='width=device-width, initial-scale=1.0')
+    title Dominó
+    
+    link(
+      rel="icon",
+      type="image/png"
+      href="/favicon-96x96.png"
+    )
+    
+    link(rel='stylesheet', href='/stylesheets/materialize.min.css')
+    link(rel='stylesheet', href='/stylesheets/material-icons.css')
+    link(rel='stylesheet', href='/stylesheets/style.css')
+          
+  body
+    main(class='container')
+      block content
+    
+    script(src='/javascripts/jquery-3.2.1.min.js')
+    script(src='/javascripts/materialize.min.js')    
+    
+    block scripts
