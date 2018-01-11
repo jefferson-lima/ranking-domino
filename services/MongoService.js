@@ -3,7 +3,7 @@ var MongoClient = require('mongodb').MongoClient;
 module.exports = class MongoService {
 
   constructor(){
-    this.url = 'mongodb://localhost:27017/domino';
+    this.url = 'mongodb://mongo:27017/domino';
     this.databaseName = 'domino';
   }
 
