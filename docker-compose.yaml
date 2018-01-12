@@ -1,4 +1,4 @@
-version: '3'
+version: '2'
 services:
   app:
     build: .
@@ -7,8 +7,10 @@ services:
       - "3000:3000"
     links:
       - mongo
+    restart: always
 
   mongo:
     image: mongo
+    container_name: mongo
     volumes:
       - /data/mongodb/db:/data/db

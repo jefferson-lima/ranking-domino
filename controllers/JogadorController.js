@@ -10,7 +10,8 @@ module.exports = class JogadorController{
 
     await this.mongoService.connect();
     var jogadores = await this.mongoService.list("jogadores");
-
+    this.mongoService.close();
+    
     res.set('Content-Type', 'application/json');
     res.send(jogadores);
 

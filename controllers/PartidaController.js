@@ -58,6 +58,8 @@ module.exports = class PartidaController{
    */
   async salvarJogador(nomeJogador) {
 
+    nomeJogador = nomeJogador.trim();
+
     var jogador = await this.mongoService.find(
       "jogadores", {nome: nomeJogador}
     );
@@ -92,6 +94,8 @@ module.exports = class PartidaController{
       }},
       {$sort: {pontos: -  1}}
     ]);
+
+    this.mongoService.close();
 
     res.render('ranking', {ranking: ranking});
 
